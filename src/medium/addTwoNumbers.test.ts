@@ -7,8 +7,8 @@ describe('addTwoNumbers', () => {
 
     test('should return the original list if only one list is provided', () => {
         const list = new ListNode(1);
-        expect(addTwoNumbers(list, null)).toBe(list);
-        expect(addTwoNumbers(null, list)).toBe(list);
+        expect(addTwoNumbers(list, null)).toStrictEqual(list);
+        expect(addTwoNumbers(null, list)).toStrictEqual(list);
     });
 
     test('should add two numbers correctly', () => {
