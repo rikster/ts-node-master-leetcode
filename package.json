@@ -4,7 +4,7 @@
   "description": "Lets go through leetcode problems in typescript",
   "main": "",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --watch src/*.ts --ignore-watch src/*.test.ts src/twosum.ts",
+    "start": "ts-node-dev --respawn --transpile-only --watch src/**/*.ts --ignore-watch \\.test\\.ts$ src/index.ts",
     "test": "jest"
   },
   "author": "Richard Hounslow",
