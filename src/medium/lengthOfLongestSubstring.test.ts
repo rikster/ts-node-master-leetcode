@@ -10,7 +10,7 @@ describe('lengthOfLongestSubstring', () => {
     test('Example 2', () => {
         const input = 'bbbbb';
         const output = 1;
-        expect(lengthOfLongestSubstring(input)).toStrictEqual(output);
+        expect(lengthOfLongestSubstring(input)).toBe(output);
     });
 
     test('Example 3', () => {
