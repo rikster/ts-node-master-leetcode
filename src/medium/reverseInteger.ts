@@ -21,13 +21,17 @@ export default function reverseInteger(x: number): number {
 
         //adding the next digit would cause the reversed integer to go below the minimum value, the function returns 0.
         rev = rev * 10 + pop;
+        console.log(rev)
     }
 
     // adding the next digit would cause the reversed integer to go below the minimum value, the function returns 0.
+    console.log('---');
     return rev;
 }
 
+console.log(reverseInteger(123));
 
+// Problem:
 // Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 // Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 

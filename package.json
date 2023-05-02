@@ -4,7 +4,7 @@
   "description": "Lets go through leetcode problems in typescript",
   "main": "",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --watch src/**/*.ts --ignore-watch \\.test\\.ts$ src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --watch src/**/*.ts --ignore-watch \\.test\\.ts$ src/medium/reverseInteger.ts",
     "test": "jest"
   },
   "author": "Richard Hounslow",
