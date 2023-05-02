@@ -1,18 +1,29 @@
 export default function reverseInteger(x: number): number {
+    // to store the reversed integer.
     let rev: number = 0;
+    // the minimum value for a signed 32-bit integer.
     const INT_MIN: number = -Math.pow(2, 31);
+    // the maximum value for a signed 32-bit integer.
     const INT_MAX: number = Math.pow(2, 31) - 1;
 
+    // while x is not 0.
     while (x !== 0) {
+        // in each iteration, calculate the last digit of x using the modulus operator.
         const pop: number = x % 10;
+
+        // last digit is removed from x using integer division.
         x = Math.trunc(x / 10);
 
+        //adding the next digit would cause the reversed integer to exceed the maximum value, the function returns 0.
         if (rev > INT_MAX / 10 || (rev === INT_MAX / 10 && pop > 7)) return 0;
+        // adding the next digit would cause the reversed integer to go below the minimum value, the function returns 0.
         if (rev < INT_MIN / 10 || (rev === INT_MIN / 10 && pop < -8)) return 0;
 
+        //adding the next digit would cause the reversed integer to go below the minimum value, the function returns 0.
         rev = rev * 10 + pop;
     }
-    
+
+    // adding the next digit would cause the reversed integer to go below the minimum value, the function returns 0.
     return rev;
 }
 
