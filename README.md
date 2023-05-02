@@ -8,11 +8,12 @@ Work your way through leetcode problems and solve them in Typscript:
   - Typescript Node Dev (ts-node-dev) 
 - Jest unit testing 
 
-## Run 
-```
-npm run start
-```
-
+## Run development 
 ```
 npm run dev
+```
+
+## Run tests
+```
+npm run test
 ```
