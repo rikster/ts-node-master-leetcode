@@ -29,6 +29,8 @@ console.log(romanToInt("III")); // Output: 3
 console.log(romanToInt("LVIII")); // Output: 58
 console.log(romanToInt("MCMXCIV")); // Output: 1994
 
+//--------------------------------------------
+
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 // Symbol       Value
@@ -67,3 +69,14 @@ console.log(romanToInt("MCMXCIV")); // Output: 1994
 // 1 <= s.length <= 15
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+//--------------------------------------------  
+
+// this problem is solved by iterating through the string and adding the value of the current roman numeral to a total sum.
+// However, if the current roman numeral is smaller than the next one, this means that you have to subtract it from the total sum
+
+// In this solution, we first create a Map romanMap where the keys are the Roman numeral characters and the values are their
+// corresponding decimal values. Then we iterate through each character in the string s and get its value from the Map.
+// If the current character is less than the next character (meaning we have a subtraction scenario like IV, IX, etc.),
+// we subtract the current value from total. Otherwise, we add the current value to total.
+// We continue this process until we have traversed the entire string. The result is the converted integer value of the Roman numeral.
