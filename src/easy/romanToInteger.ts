@@ -81,6 +81,8 @@ console.log(romanToInt("MCMXCIV")); // Output: 1994
 // we subtract the current value from total. Otherwise, we add the current value to total.
 // We continue this process until we have traversed the entire string. The result is the converted integer value of the Roman numeral.
 
+//--------------------------------------------
+
 // Super fast solution
 function romanToIntFast(s: string): number {
   let sum = 0;
