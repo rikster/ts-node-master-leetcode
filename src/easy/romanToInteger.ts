@@ -70,7 +70,7 @@ console.log(romanToInt("MCMXCIV")); // Output: 1994
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
-//--------------------------------------------  
+//--------------------------------------------
 
 // this problem is solved by iterating through the string and adding the value of the current roman numeral to a total sum.
 // However, if the current roman numeral is smaller than the next one, this means that you have to subtract it from the total sum
@@ -80,3 +80,31 @@ console.log(romanToInt("MCMXCIV")); // Output: 1994
 // If the current character is less than the next character (meaning we have a subtraction scenario like IV, IX, etc.),
 // we subtract the current value from total. Otherwise, we add the current value to total.
 // We continue this process until we have traversed the entire string. The result is the converted integer value of the Roman numeral.
+
+// Super fast solution
+function romanToIntFast(s: string): number {
+  let sum = 0;
+  let romanToArabic = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  for (let i = 0; i < s.length; ++i) {
+    if (i < s.length - 1 && romanToArabic[s[i]] < romanToArabic[s[i + 1]]) {
+      sum -= romanToArabic[s[i]];
+    } else {
+      sum += romanToArabic[s[i]];
+    }
+  }
+
+  return sum;
+}
+
+console.log(romanToIntFast("III")); // Output: 3
+console.log(romanToIntFast("LVIII")); // Output: 58
+console.log(romanToIntFast("MCMXCIV")); // Output: 1994
