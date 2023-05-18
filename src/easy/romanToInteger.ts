@@ -108,3 +108,24 @@ function romanToIntFast(s: string): number {
 console.log(romanToIntFast("III")); // Output: 3
 console.log(romanToIntFast("LVIII")); // Output: 58
 console.log(romanToIntFast("MCMXCIV")); // Output: 1994
+
+// In the faster code you provided, a JavaScript object (dictionary) is used for the mappings instead of a Map object. Object property
+// access can often be faster than Map.get() calls because JavaScript engines optimize object property accesses.
+
+// In general, JavaScript engines do several optimizations for object property access, like creating hidden classes and inline caching.
+
+// 1. Hidden Classes: JavaScript engines create internal "hidden classes" behind the scenes that speed up property access.
+// If the objects have the same hidden class, property access is fast.
+
+// 2. Inline Caching: This is an optimization technique used in the JavaScript engines to reduce the overhead of dynamic dispatch
+// (figuring out what method to call). If the same operation is done repeatedly, such as accessing properties on an object,
+// the engine can create an "inline cache" to store the location of the property in memory and access it directly instead of looking it up every time.
+
+// However, the difference in performance between using an object and a Map will be negligible for smaller datasets.
+// In large applications with complex data structures and very frequent data access, using one over the other could make a difference.
+
+// It's also important to remember that readability and clarity of code often takes precedence over minor performance optimizations.
+// Map might be more suitable if you need features it provides such as ordering of keys, easy size determination, or storage of non-string keys.
+
+// The second code block avoids a few operations that the first does, such as Map.get() and the existence check of next character,
+// and hence may have slight performance benefits. But again, the difference in speed should be negligible for this size of dataset.
