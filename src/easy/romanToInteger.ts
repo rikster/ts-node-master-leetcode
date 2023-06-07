@@ -83,7 +83,7 @@ console.log(romanToInt("MCMXCIV")); // Output: 1994
 
 //--------------------------------------------
 
-// Super fast solution
+// Super fast solution - js only
 function romanToIntFast(s: string): number {
   let sum = 0;
   let romanToArabic = {
